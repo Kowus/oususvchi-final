@@ -65,7 +65,8 @@
 
     <!--<script src="App.js"></script>-->
 
-
+    <!--Google Web Crawl-->
+    <meta name="google-site-verification" content="SYCDEJ4VKBLqPIaowu0rKkbE4EnhMRFVLyW01bLCEqU" />
 </head>
 
 <body id="body">
@@ -97,13 +98,15 @@
             </div>
             <div class="col-xs-6">
                 <div class="nav">
-                    <a href="#" data-placement="bottom" title="Menu" class="menu" data-toggle="dropdown"><i
+                    <a href="#" data-placement="bottom" title="Menu" class="menu" data-toggle="dropdown"
+                       target="_self"><i
                                 class="pe-7s-menu"></i></a>
                     <div class="dropdown-menu">
                         <div class="arrow-up"></div>
                         <ul>
                             <!-- angular array for nav-->
-                            <li ng-repeat="nav in navctrl.navs"><a data-scroll href="{{nav.href}}">{{nav.name}}<i
+                            <li ng-repeat="nav in navctrl.navs"><a data-scroll href="{{nav.href}}" target="_self">{{nav
+                                    .name}}<i
                                             class="{{nav.class}}"></i></a><span class="menu-effect"></span></li>
                         </ul>
                     </div>
@@ -121,7 +124,7 @@
 <section id="services" class="service-area" ng-controller="ServicesController as servi">
     <div class="container">
         <h2 class="block_title">Services</h2>
-        <div class="row">
+        <div class="row"><a name="services"></a>
             <div class="col-md-3 col-sm-6" ng-repeat="serv in servi.service">
                 <div class="services">
                     <div class="service-wrap">
@@ -142,7 +145,7 @@
 
 <section id="portfolio" class="portfolio-area" ng-controller="PortfolioController as port">
     <div class="container">
-        <h2 class="block_title">Portfolio</h2>
+        <h2 class="block_title">Portfolio</h2><a name="portfolio"></a>
         <div class="row port cs-style-3">
             <div class="col-md-5 col-sm-6 col-xs-12 item-space" ng-repeat="work in port.works">
                 <a name="{{work.link}}"></a>
@@ -187,7 +190,7 @@
 <!-- Testimonial Area -->
 
 <section id="testimonial" class="testimonial-area" ng-controller="TestimonialController as tescon">
-    <div class="container">
+    <div class="container"><a name="testimonials"></a>
         <h2 class="block_title">Testimonials</h2>
         <div class="row">
             <!--div class="col-xs-12">
@@ -247,7 +250,7 @@
                         <div class="form-group">
                             <input type="email" id="mail" name="mail" class="form-control" required
                                    placeholder="Enter your email" value="<%= email %>">
-                            <a name="contact"></a>
+
                         </div>
                         <div class="form-group">
                             <p id="kowus"></p>
@@ -256,6 +259,7 @@
                         </div>
 
                         <button type="submit" class="btn medium">Hit me up</button>
+                        <a name="contact"></a>
                     </form>
                     <p id="statusMessage" class="alert alert-success" style="width:96%; text-align: center;">
                         <span id="messCon"><%= stat %></span>

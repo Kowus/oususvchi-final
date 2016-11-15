@@ -145,7 +145,7 @@
             {
                 name: 'Testimonials',
                 class: 'pe-7s-comment',
-                href: '#testimonial',
+                href: '#testimonials',
             },
             {
                 name: 'Contact',
