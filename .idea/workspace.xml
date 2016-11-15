@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="23455d1e-81be-48e8-92c5-bb3c9b9b8cf3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
     </list>
     <ignored path="oususvchi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,15 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#figure#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1479186068856" expanded="true" signature="2670:2823" ph="..." />
-                <marker date="1479186068856" expanded="true" signature="2763:2791" ph="..." />
+                <marker date="1479187743676" expanded="true" signature="2670:2823" ph="..." />
+                <marker date="1479187743676" expanded="true" signature="2763:2791" ph="..." />
               </folding>
             </state>
           </provider>
@@ -47,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -103,9 +104,9 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/public/javascripts/app/app.js" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/templates/ssaver.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/script.js" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
     </option>
   </component>
@@ -760,7 +761,7 @@
       <workItem from="1479051118324" duration="1884000" />
       <workItem from="1479056954385" duration="10000" />
       <workItem from="1479143988926" duration="1778000" />
-      <workItem from="1479163924355" duration="22578000" />
+      <workItem from="1479163924355" duration="23213000" />
     </task>
     <task id="LOCAL-00001" summary="added quickemailverification module">
       <created>1479179196820</created>
@@ -825,11 +826,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479186909279</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="made css modifications">
+      <created>1479187146446</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1479187146446</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34865000" />
+    <option name="totallyTimeSpent" value="35500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -878,7 +886,8 @@
     <MESSAGE value="resolve startup dynos" />
     <MESSAGE value="added mailgun API" />
     <MESSAGE value="fixed css" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed css" />
+    <MESSAGE value="made css modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="made css modifications" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -903,8 +912,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#a#0;n#figure#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1479186068856" expanded="true" signature="2670:2823" ph="..." />
-            <marker date="1479186068856" expanded="true" signature="2763:2791" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2670:2823" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2763:2791" ph="..." />
           </folding>
         </state>
       </provider>
@@ -971,8 +980,8 @@
           <caret line="156" column="55" selection-start-line="156" selection-start-column="55" selection-end-line="156" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#a#0;n#figure#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1479186068856" expanded="true" signature="2670:2823" ph="..." />
-            <marker date="1479186068856" expanded="true" signature="2763:2791" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2670:2823" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2763:2791" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1007,8 +1016,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#a#0;n#figure#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1479186068856" expanded="true" signature="2670:2823" ph="..." />
-            <marker date="1479186068856" expanded="true" signature="2763:2791" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2670:2823" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2763:2791" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1042,8 +1051,8 @@
           <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#a#0;n#figure#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1479186068856" expanded="true" signature="2670:2823" ph="..." />
-            <marker date="1479186068856" expanded="true" signature="2763:2791" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2670:2823" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2763:2791" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1152,18 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#figure#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1479186068856" expanded="true" signature="2670:2823" ph="..." />
-            <marker date="1479186068856" expanded="true" signature="2763:2791" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/templates/ssaver.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1177,6 +1174,18 @@
         <state relative-caret-position="306">
           <caret line="171" column="26" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#figure#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1479187743676" expanded="true" signature="2670:2823" ph="..." />
+            <marker date="1479187743676" expanded="true" signature="2763:2791" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

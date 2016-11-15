@@ -92,7 +92,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6">
-                <div class="logo"><a data-scroll href="#body" class="logo-text">Ousu Svchi</a></div>
+                <!--<div class="logo"><a data-scroll href="#body" class="logo-text">Ousu Svchi</a></div>-->
+                <div class="logo logo-text">Ousu Svchi</div>
             </div>
             <div class="col-xs-6">
                 <div class="nav">
@@ -125,7 +126,7 @@
                 <div class="services">
                     <div class="service-wrap">
                         <i class="{{serv.icon}}"></i>
-                        <a href="{{serv.link}}" class="ouslinks">
+                        <a href="{{serv.link}}" target="_self" class="ouslinks">
                             <h3>{{serv.head}}</h3>
                             <p>{{serv.content}}</p>
                         </a>
@@ -144,7 +145,7 @@
         <h2 class="block_title">Portfolio</h2>
         <div class="row port cs-style-3">
             <div class="col-md-5 col-sm-6 col-xs-12 item-space" ng-repeat="work in port.works">
-
+                <a name="{{work.link}}"></a>
                 <figure>
                     <img ng-src="{{work.image}}" alt="{{work.name}}">
                     <figcaption>
@@ -160,7 +161,7 @@
                        style="color: steelblue; background-color: #333333; padding: 10px 8px">Take a
                         look</a>
                 </figure>
-                <a name="{{work.link}}"></a>
+
                 <p></p>
                 <div class="collapse" id="{{work.id}}">
                     <div ng-include='work.ext'></div>
@@ -305,7 +306,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <p class="copyright">© Copyright 2016 Ousu Svchi:<a href="#body" target="_blank"> Life In A Pixel</a>
+                <p class="copyright">© Copyright 2016 Ousu Svchi:<a href="#body" target="_top"> Life In A Pixel</a>
                 </p>
             </div>
             <div class="col-sm-6"><i class=""></i>
