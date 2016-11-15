@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -670,7 +670,7 @@
       <workItem from="1479051118324" duration="1884000" />
       <workItem from="1479056954385" duration="10000" />
       <workItem from="1479143988926" duration="1778000" />
-      <workItem from="1479163924355" duration="15709000" />
+      <workItem from="1479163924355" duration="15744000" />
     </task>
     <task id="LOCAL-00001" summary="added quickemailverification module">
       <created>1479179196820</created>
@@ -693,11 +693,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479179997223</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="resolve startup dynos">
+      <created>1479180268723</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1479180268723</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27996000" />
+    <option name="totallyTimeSpent" value="28031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="683" y="52" width="683" height="716" extended-state="4" />
@@ -1031,7 +1038,7 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding />
         </state>
       </provider>
