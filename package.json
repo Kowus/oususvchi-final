@@ -1,0 +1,37 @@
+{
+  "name": "ousu-svchi",
+  "version": "1.0.0",
+  "description": "oususvchi's server side validation",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "^1.15.2",
+    "js-alert": "^1.0.4",
+    "xmlhttprequest": "^1.8.0",
+    "quickemailverification": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node /bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kowus/oususvchi.git"
+  },
+  "keywords": [
+    "ousu",
+    "svchi",
+    "kowus",
+    "joshua sakyi",
+    "barnabas",
+    "life in a pixel",
+    "ousu svchi",
+    "photography",
+    "people of Ghana"
+  ],
+  "author": "Barnabas Nomo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kowus/oususvchi/issues"
+  },
+  "homepage": "https://github.com/Kowus/oususvchi#readme"
+}

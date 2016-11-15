@@ -1,0 +1,24 @@
+<h2 class="block_title">Screen Savers</h2>
+<div class="row port cs-style-3">
+    <div ng-repeat="pic in pics" class="col-md-4 col-sm-6 col-xs-12 item-space">
+        <figure>
+            <img src="{{pic.img}}" alt="">
+            <figcaption>
+                <h3 style="font-size: 1em; font-weight: bold;">{{pic.title}}</h3>
+                <span>{{pic.by}}</span>
+                <a href="{{pic.url}}" class="button" download>Download</a>
+            </figcaption>
+        </figure>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="btn-center">
+            <a href="#" class="small button" style="margin-right: 10px;"><i
+                        class="pe-7s-angle-left-circle pe-va"></i></a>
+            <a href="#" class="small button" style="margin-right: 10px;">View all</a>
+            <a href="#" class="small button" style="margin-right: 10px;"><i
+                        class="pe-7s-angle-right-circle pe-va"></i></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+<html>
+
+<head>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+
+    <script>
+        //configuring
+        var config = {
+            apiKey: "AIzaSyDteNE0JKZ0ei8YckaIXHIuK-s3FpdYkvU",
+            authDomain: "dc-weatherapp.firebaseapp.com",
+            databaseURL: "https://dc-weatherapp.firebaseio.com",
+            storageBucket: "dc-weatherapp.appspot.com",
+            messagingSenderId: "297106554955"
+
+        };
+
+        var app = firebase.initializeApp(config);
+
+    </script>
+
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        progress {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <script>
+
+
+
+        var uploadfiles = function(){
+            var title = document.getElementById("title").value;
+            var by = document.getElementById("by").value;
+
+            var uploader = document.getElementById("uploader")
+            var filebtn = document.getElementById("filebtn")
+
+
+            var file = document.getElementById("filebtn").files[0]
+
+            var storageRef = app.storage().ref('images/'+file.name);
+
+            var task = storageRef.put(file);
+
+            task.on('state_changed',
+
+                    function progress(snapshot){
+                        var perc = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+                        uploader.value=perc;
+                    },
+
+                    function error(err){
+                        alert('error while uploading')
+                    },
+                    function success(){
+                        var title = document.getElementById("title").value;
+                        var by = document.getElementById("by").value;
+                        // console.log(task)
+                        // console.log(by)
+                        var newPostKey = app.database().ref().child('posts').push().key()
+                        app.database().ref("posts/"+newPostKey).set(
+                                {
+                                    'title':title,
+                                    'by':by,
+                                    'img': task.snapshot.downloadURL
+                                }
+                        )
+                    }
+
+            )
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+<progress id="uploader"></progress>
+
+<input id="filebtn" type="file">
+<input id="title" type="text" placeholder="Title:">
+<input id="by" type="text" placeholder="By:">
+
+<button onclick="uploadfiles()" style="margin-top:1em" type="button">Upload</button>
+
+
+</body>
+
+</html>

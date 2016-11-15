@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html lang="en" class="no-js" ng-app="pagey">
+<!--<![endif]-->
+
+<head>
+    <title>Ousu Svchi</title>
+    <link rel="icon" href="/images/ous.jpg">
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <meta name="description" content="Ousu Svchi">
+    <meta name="keywords" content="Ousu,Svchi,Ousu Svchi,screensaver,photography,events,mentoring, Life In A Pixel">
+    <meta name="author" content="Barnabas Nomo,Kowus">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/font_icon/stylesheets/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="/font_icon/stylesheets/helper.css">
+    <link rel="stylesheet" href="/stylesheets/owl.carousel.css">
+    <link rel="stylesheet" href="/stylesheets/owl.theme.css">
+    <link rel="stylesheet" href="/stylesheets/animate.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <!-- google fonts -->
+    <link href='http://fonts.googleapis.com/stylesheets?family=Dosis:200,300,400,500|Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,100|Titillium+Web:400,200,300italic,300,200italic'
+          rel='stylesheet' type='text/stylesheets'>
+
+    <script src="/javascripts/modernizr.js"></script>
+
+    <!--  angular js -->
+    <script type="text/javascript" src="/javascripts/app/angular.min.js"></script>
+    <script type="text/javascript" src="/javascripts/app/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+
+
+    <script>
+
+        //configuring
+        var config = {
+            apiKey: "AIzaSyDteNE0JKZ0ei8YckaIXHIuK-s3FpdYkvU",
+            authDomain: "dc-weatherapp.firebaseapp.com",
+            databaseURL: "https://dc-weatherapp.firebaseio.com",
+            storageBucket: "gs://dc-weatherapp.appspot.com",
+            messagingSenderId: "297106554955"
+
+        };
+
+        var app = firebase.initializeApp(config);
+
+
+    </script>
+
+    <!--<script src="App.js"></script>-->
+
+
+</head>
+
+<body id="body">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Header area -->
+<header id="header">
+    <div class="center text-center">
+        <h1 class="bigheadline">Ousu Svchi</h1>
+        <h4 class="subheadline">Life In A Pixel</h4>
+        <p id="kowus" style="color: black; font-size: 2em;"></p>
+    </div>
+    <div class="bottom">
+        <a data-scroll href="#navigation" class="scrollDown animated pulse" id="scrollToContent"><i
+                    class="pe-7s-angle-down-circle pe-va"></i></a>
+    </div>
+</header>
+
+<!-- Navigation area -->
+<section id="navigation" ng-controller="NavController as navctrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="logo"><a data-scroll href="#body" class="logo-text">Ousu Svchi</a></div>
+            </div>
+            <div class="col-xs-6">
+                <div class="nav">
+                    <a href="#" data-placement="bottom" title="Menu" class="menu" data-toggle="dropdown"><i
+                                class="pe-7s-menu"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="arrow-up"></div>
+                        <ul>
+                            <!-- angular array for nav-->
+                            <li ng-repeat="nav in navctrl.navs"><a data-scroll href="{{nav.href}}">{{nav.name}}<i
+                                            class="{{nav.class}}"></i></a><span class="menu-effect"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Content Area -->
+
+<!-- services section -->
+
+<section id="services" class="service-area" ng-controller="ServicesController as servi">
+    <div class="container">
+        <h2 class="block_title">Services</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6" ng-repeat="serv in servi.service">
+                <div class="services">
+                    <div class="service-wrap">
+                        <i class="{{serv.icon}}"></i>
+                        <a href="{{serv.link}}" target="{{serv.target}}" class="ouslinks">
+                            <h3>{{serv.head}}</h3>
+                            <p>{{serv.content}}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- services -->
+
+<!-- Portfolio Area -->
+
+<section id="portfolio" class="portfolio-area" ng-controller="PortfolioController as port">
+    <div class="container">
+        <h2 class="block_title">Portfolio</h2>
+        <div class="row port cs-style-3">
+            <div class="col-md-5 col-sm-6 col-xs-12 item-space" ng-repeat="work in port.works">
+
+                <figure>
+                    <img ng-src="{{work.image}}" alt="{{work.name}}">
+                    <figcaption>
+                        <h3>{{work.name}}</h3>
+                        <span>{{work.description}}</span>
+                        <!--a href="{{work.link}}" target="_blank" class="button" >Take a look</a-->
+                        <a href="{{work.id2}}" class="button" data-toggle="collapse">Take a look</a>
+                    </figcaption>
+                </figure>
+                <div class="collapse" id="{{work.id}}">
+                    <div ng-include='work.ext'></div>"
+
+
+
+
+
+                </div>
+
+            <div class="col-xs-12">
+                <div class="btn-center">
+                    <a href="#" class="big button" style="border: 0px;"> </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        </div>
+    <!-- container -->
+
+</section>
+<!-- portfolio -->
+
+<!-- Testimonial Area -->
+
+<section id="testimonial" class="testimonial-area" ng-controller="TestimonialController as tescon">
+    <div class="container">
+        <h2 class="block_title">Testimonials</h2>
+        <div class="row">
+            <!--div class="col-xs-12">
+            </div-->
+            <div id="testimonial-container" class="col-xs-12">
+                <div class="testimonila-block" ng-repeat="item in tescon.test">
+                    <img ng-src="{{item.pic}}" alt="clients" class="selfshot">
+                    <p>{{item.content}}</p>
+                    <strong>{{item.name}}</strong>
+                    <br>
+                    <small>{{item.title}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container -->
+</section>
+<!-- testimonial -->
+
+<!-- Contact Area -->
+
+<section id="contact" class="mapWrap" ng-controller="ProfileController as proctrl">
+    <div id="googleMap" style="width:100%;"></div>
+    <div id="contact-area">
+        <div class="container">
+            <h2 class="block_title">Hey !!!</h2>
+            <div class="row">
+                <div class="col-xs-12">
+                </div>
+                <div class="col-sm-6">
+                    <div class="moreDetails">
+                        <h2 class="con-title">Profile</h2>
+                        <p><%= about %><br></p>
+
+                        <br><span style="color: violet; font-size: 1.2em; font-weight: bold;">Background</span><br>
+                        <div ng-repeat="pro in proctrl.prof.background">
+                            <p>
+                                <br><span style="font-style: italic; font-weight: bold;">{{pro.head}}</span><br>
+                                <span style="font-style: italic; margin-left: 10px; font-size: 0.8em;">{{pro.cont}}</span><br>
+                            </p>
+                        </div>
+                        <ul class="address">
+                            <!--<li><i class="pe-7s-map-marker"></i><span>1600 Pennsylvania Ave NW,<br>Washington, DC 20500,<br>United States</span></li>-->
+                            <li><i class="pe-7s-mail"></i><span>oususvchi@gmail.com</span></li>
+                            <li><i class="pe-7s-phone"></i><span>+233-20-901-3742</span></li>
+                            <li><i class="pe-7s-global"></i><span><a href="#body">www.oususvchi.com</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h2 class="con-title">Let your voice be heard</h2>
+                    <form role="form" action="myapi" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="my_email" class="form-control" required
+                                   placeholder="Enter your email">
+                            <a name="contact"></a>
+                        </div>
+                        <div class="form-group">
+                            <p id="kowus"></p>
+                            <textarea name="message" class="form-control" rows="5" required
+                                      placeholder="Let this space be your scratchpad, let your voice be heard, share opinions, suggestions, how can I be better, want to book me for an event? I do appreciate your taking the time to visit my page. Your feedback really means a lot to me! "></textarea>
+                        </div>
+
+                        <button type="submit" class="btn medium">Hit me up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- container -->
+    </div>
+    </div>
+    <!-- contact-area -->
+    <div id="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="scoialinks">
+                        <li class="normal-txt">Find me on</li>
+                        <li class="social-icons">
+                            <a class="facebook" href="#"></a>
+                        </li>
+                        <li class="social-icons">
+                            <a class="twitter" href="#"></a>
+                        </li>
+                        <li class="social-icons">
+                            <a class="linkedin" href="#"></a>
+                        </li>
+                        <li class="social-icons">
+                            <a class="google-plus" href="#"></a>
+                        </li>
+                        <li class="social-icons">
+                            <a class="wordpress" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- social -->
+</section>
+<!-- contact -->
+
+<!-- Footer Area -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="copyright">© Copyright 2016 Ousu Svchi:<a href="#body" target="_blank"> Life In A Pixel</a>
+                </p>
+            </div>
+            <div class="col-sm-6"><i class=""></i>
+                <p class="designed ousfooter">Designed by: <a href="http://www.kowus.xyz">Barnabas Nomo</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Necessary scripts -->
+<script src="/javascripts/jquery-2.1.3.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA37XumsVrTdjCg_bQys8uynfMfEKe5OKc&callback=initMap"type="text/javascript"></script>
+
+<script src="/javascripts/jquery.actual.min.js"></script>
+<script src="/javascripts/smooth-scroll.js"></script>
+<script src="/javascripts/owl.carousel.js"></script>
+<script src="/javascripts/script.js"></script>
+
+<!--<script type="text/javascript">
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "myapi", true);
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            // document.getElementById("kowus").innerHTML = this.responseText;
+            alert(this.responseText);
+            return;
+        }
+    };
+
+    xhttp.send();
+</script>-->
+</body>
+
+</html>
