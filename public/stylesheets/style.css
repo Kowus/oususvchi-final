@@ -681,6 +681,7 @@ footer {
 		font-size: 6em;
 	}
 
+
 }
 
 @media all and (max-width: 991px) {
@@ -731,6 +732,14 @@ footer {
 	    top: 70%;
 	    left: 46%;
 	}
+    /*.cs-style-3 figure {
+        overflow: visible;
+    }
+    .cs-style-3 figcaption {
+
+        opacity: 1;
+
+    }*/
 }
 @media all and (max-width: 380px) {
 
@@ -760,7 +769,14 @@ footer {
 	    width: 30px;
 	    height: 30px;
 	}
-	
+    .cs-style-3 figure {
+        overflow: visible;
+    }.cs-style-3 figcaption {
+
+         opacity: 1;
+
+     }
+
 }
 
 @media all and (max-width: 480px) {
@@ -769,4 +785,22 @@ footer {
 	    top: 70%;
 	    left: 44%;
 	}
+    .cs-style-3 figure {
+        overflow: visible;
+    }.cs-style-3 figcaption {
+
+         opacity: 1;
+
+     }
+}
+
+@media only screen and (max-device-width: 480px){
+    .cs-style-3 figure {
+        overflow: visible;
+    }.cs-style-3 figcaption {
+
+         opacity: 1;
+
+     }
+
 }

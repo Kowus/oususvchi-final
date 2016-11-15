@@ -45,7 +45,7 @@
             {
                 name: 'Screensavers',
                 description: 'For Mobile Screens',
-                link: './templates/ssaver.ejs',
+                link: 'ssaver',
                 image: '/images/ousumbre2.jpg',
                 id: 'ssaverId',
                 id2: '#ssaverId',
@@ -54,7 +54,7 @@
             {
                 name: 'People of Ghana',
                 description: 'Story Album of Random People and Events',
-                link: 'peepo.html',
+                link: 'peepo',
                 image: '/images/osu_castle.jpg',
                 id: 'peepoId',
                 id2: '#peepoId',
@@ -68,29 +68,30 @@
                 icon: 'pe-7s-phone pe-dj pe-va',
                 head: 'Screen Savers',
                 content: 'Give your phone\'s homescreen a cool feel! Use pictures from my weekly series as Wallpapers.',
-                link: 'ssaver.html',
-                target: '_blank'
+                link: '#ssaver',
+
+
             },
             {
                 icon: 'pe-7s-camera pe-dj pe-va',
                 head: 'Photography',
                 content: 'Observe nature\'s diverse intricacies and beauty through my lens, and of course, your screens.',
-                link: 'peepo.html',
-                target: '_blank'
+                link: '#peepo',
+
             },
             {
                 icon: 'pe-7s-note2 pe-dj pe-va',
                 head: 'Events & Coverage',
                 content: 'Be it weddings or graduations, or leisurely picnics, I\'m the go to guy, if you want to get going.',
                 link: '#contact',
-                target: ''
+
             },
             {
                 icon: 'pe-7s-config pe-dj pe-va',
                 head: 'Support',
                 content: 'Are you an upcoming photographer? Do you need mentoring or tips to get started? Drop me a line!',
                 link: '#contact',
-                target: ''
+
             },
 
 

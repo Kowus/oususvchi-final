@@ -125,7 +125,7 @@
                 <div class="services">
                     <div class="service-wrap">
                         <i class="{{serv.icon}}"></i>
-                        <a href="{{serv.link}}" target="{{serv.target}}" class="ouslinks">
+                        <a href="{{serv.link}}" class="ouslinks">
                             <h3>{{serv.head}}</h3>
                             <p>{{serv.content}}</p>
                         </a>
@@ -150,28 +150,34 @@
                     <figcaption>
                         <h3>{{work.name}}</h3>
                         <span>{{work.description}}</span>
+
                         <!--a href="{{work.link}}" target="_blank" class="button" >Take a look</a-->
-                        <a href="{{work.id2}}" class="button" data-toggle="collapse">Take a look</a>
+                        <a href="{{work.id2}}" class="button htem2" data-toggle="collapse">Take a look</a>
+
                     </figcaption>
+
+                    <a href="{{work.id2}}" class="button htem col-sm-3" data-toggle="collapse"
+                       style="color: steelblue; background-color: #333333; padding: 10px 8px">Take a
+                        look</a>
                 </figure>
+                <a name="{{work.link}}"></a>
+                <p></p>
                 <div class="collapse" id="{{work.id}}">
-                    <div ng-include='work.ext'></div>"
-
-
+                    <div ng-include='work.ext'></div>
 
 
 
                 </div>
 
-            <div class="col-xs-12">
-                <div class="btn-center">
-                    <a href="#" class="big button" style="border: 0px;"> </a>
+                <div class="col-xs-12">
+                    <div class="btn-center">
+                        <a href="#" class="big button" style="border: 0px;"> </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
         </div>
+    </div>
     <!-- container -->
 
 </section>
@@ -234,7 +240,8 @@
                     <h2 class="con-title">Let your voice be heard</h2>
                     <form role="form" action="myapi" method="POST">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" required placeholder="Enter your name" value="<%= name %>">
+                            <input type="text" name="name" class="form-control" required placeholder="Enter your name"
+                                   value="<%= name %>">
                         </div>
                         <div class="form-group">
                             <input type="email" id="mail" name="mail" class="form-control" required
@@ -254,10 +261,10 @@
                         <a href="#" name="bot" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     </p></div>
                 <p id="some"><%= mstus %></p>
-                </div>
             </div>
         </div>
-        <!-- container -->
+    </div>
+    <!-- container -->
 
 
     <!-- contact-area -->
@@ -313,7 +320,9 @@
 <script src="/javascripts/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA37XumsVrTdjCg_bQys8uynfMfEKe5OKc&callback=initMap" type="text/javascript"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA37XumsVrTdjCg_bQys8uynfMfEKe5OKc&callback=initMap"
+        type="text/javascript"></script>
 
 <script src="/javascripts/jquery.actual.min.js"></script>
 <script src="/javascripts/smooth-scroll.js"></script>

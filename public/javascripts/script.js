@@ -178,12 +178,20 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-
-
-
 //Misc
 var st = $('#some').val();
 $('#some').hide();
+
+setInterval(function () {
+    if ($(window).width() < 500) {
+        $('.htem').show();
+        $('.htem2').hide()
+    } else {
+        $('.htem').hide();
+        $('.htem2').show();
+    }
+}, 10);
+
 
 $('#statusMessage').hide();
 
