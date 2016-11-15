@@ -9,6 +9,15 @@ var index = require('./routes/index');
 var uploader = require('./routes/uploader');
 var app = express();
 
+
+
+var mg_api_key = 'key-e774c82158868b11dfe76f08e06bfe82';
+var mg_domain = 'app7059ee7b80fd478393c9cdeb43c39163.mailgun.org';
+var mailgun = require('mailgun-js')({apiKey: mg_api_key, domain: mg_domain});
+
+
+
+
 var date = new Date();
 
 var API_Key = '1bf1a4c3a29abbb2f3d9c8c0ce6b872f5e65dabd1f2541c6ab9c8f995a1d';
@@ -41,8 +50,8 @@ app.post('/myapi', function (req, res) {
     var dta = date.getUTCHours() + ':' + date.getUTCMinutes() + 'UTC';
     var data = {
         from: bodyJson.name + " <" + bodyJson.mail + ">",
-        to: 'barnabas@elite-education.org',
-        subject: 'New kowus.xyz ' + dta,
+        to: 'oususvchi@gmail.com',
+        subject: 'New Web Contact' + dta,
         text: bodyJson.mess
     };
     quickemailverification.verify(bodyJson.mail, function (err, response) {
@@ -55,9 +64,9 @@ app.post('/myapi', function (req, res) {
         else {
             if (response.body.result == 'valid') {
                 smess = 'Message Sent';
-                /*mailgun.messages().send(data, function (error, body) {
+                mailgun.messages().send(data, function (error, body) {
                  console.log(body);
-                 });*/
+                 });
             }
             else {
                 smess = 'Message not sent invalid Email:' + bodyJson.mail;
