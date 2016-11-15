@@ -7,11 +7,12 @@
 
         return function debounced() {
             var obj = this, args = arguments;
+
             function delayed() {
                 if (!execAsap)
                     func.apply(obj, args);
                 timeout = null;
-            };
+            }
 
             if (timeout)
                 clearTimeout(timeout);
@@ -20,9 +21,11 @@
 
             timeout = setTimeout(delayed, threshold || 100);
         };
-    }
+    };
     // smartresize 
-    jQuery.fn[sr] = function (fn) { return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+    jQuery.fn[sr] = function (fn) {
+        return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
+    };
 
 })(jQuery, 'smartresize');
 
@@ -55,16 +58,12 @@ var $ = jQuery;
     function setHeaderBackground() {
         var scrollTop = jQuery(window).scrollTop(); // our current vertical position from the top 
 
-        if (scrollTop > 300 || jQuery(window).width() < 700)
-        {
+        if (scrollTop > 300 || jQuery(window).width() < 700) {
             jQuery('#header .top').addClass('solid');
-        } else
-        {
+        } else {
             jQuery('#header .top').removeClass('solid');
         }
     }
-
-
 
 
     ///////////////////////////////
@@ -90,9 +89,6 @@ var $ = jQuery;
 
 
 smoothScroll.init();
-
-
-
 
 
 ///////////////////////////////
@@ -121,29 +117,24 @@ $(document).ready(function () {
 });
 
 
-
 ///////////////////////////////
 // Header Fixed
 ///////////////////////////////
-
 
 
 var menu = $('#navigation');
 var origOffsetY = menu.offset().top;
 
 function scroll() {
-    if ($(window).scrollTop() >= origOffsetY)
-    {
+    if ($(window).scrollTop() >= origOffsetY) {
         $('#navigation').addClass('nav-wrap');
         $('#services').addClass('exp');
         //$('.content').addClass('menu-padding');
-    } else
-    {
+    } else {
         $('#navigation').removeClass('nav-wrap');
         $('#services').removeClass('exp');
         //$('.content').removeClass('menu-padding');
     }
-
 
 
 }
@@ -162,7 +153,7 @@ $(document).ready(function () {
         navigation: false, // Show next and prev buttons
         slideSpeed: 1000,
         paginationSpeed: 1000,
-        singleItem: true,
+        singleItem: true
     });
 
 });
@@ -186,4 +177,38 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
+
+
+
+//Misc
+var st = $('#some').val();
+$('#some').hide();
+
+$('#statusMessage').hide();
+
+
+function ness() {
+    var tt = $('#messCon').text().toString();
+
+    if (tt === "Message Sent") {
+        $('#statusMessage').removeClass('alert-danger').addClass('alert-success').show(400, 'linear').delay(5000).hide('slow', 'linear');
+    } else if (tt == '') {
+        $('#statusMessage').hide();
+    } else /*if(tt == 'Message Not Sent')*/{
+        $('#statusMessage').removeClass('alert-success').addClass('alert-danger').show(400, 'linear').delay(5000).hide('slow', 'linear');
+
+        alert(tt.toString());
+    }
+
+    if (st == 1)
+        $('#mail').addClass('text-danger');
+    else
+        $('#mail').removeClass('text-danger');
+
+
+}
+
+
+ness();
 

@@ -234,27 +234,32 @@
                     <h2 class="con-title">Let your voice be heard</h2>
                     <form role="form" action="myapi" method="POST">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" required placeholder="Enter your name">
+                            <input type="text" name="name" class="form-control" required placeholder="Enter your name" value="<%= name %>">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="my_email" class="form-control" required
-                                   placeholder="Enter your email">
+                            <input type="email" id="mail" name="mail" class="form-control" required
+                                   placeholder="Enter your email" value="<%= email %>">
                             <a name="contact"></a>
                         </div>
                         <div class="form-group">
                             <p id="kowus"></p>
                             <textarea name="message" class="form-control" rows="5" required
-                                      placeholder="Let this space be your scratchpad, let your voice be heard, share opinions, suggestions, how can I be better, want to book me for an event? I do appreciate your taking the time to visit my page. Your feedback really means a lot to me! "></textarea>
+                                      placeholder="Let this space be your scratchpad, let your voice be heard, share opinions, suggestions, how can I be better, want to book me for an event? I do appreciate your taking the time to visit my page. Your feedback really means a lot to me! "><%= message %></textarea>
                         </div>
 
                         <button type="submit" class="btn medium">Hit me up</button>
                     </form>
+                    <p id="statusMessage" class="alert alert-success" style="width:96%; text-align: center;">
+                        <span id="messCon"><%= stat %></span>
+                        <a href="#" name="bot" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    </p></div>
+                <p id="some"><%= mstus %></p>
                 </div>
             </div>
         </div>
         <!-- container -->
-    </div>
-    </div>
+
+
     <!-- contact-area -->
     <div id="social">
         <div class="container">
@@ -308,11 +313,12 @@
 <script src="/javascripts/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA37XumsVrTdjCg_bQys8uynfMfEKe5OKc&callback=initMap"type="text/javascript"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA37XumsVrTdjCg_bQys8uynfMfEKe5OKc&callback=initMap" type="text/javascript"></script>
 
 <script src="/javascripts/jquery.actual.min.js"></script>
 <script src="/javascripts/smooth-scroll.js"></script>
 <script src="/javascripts/owl.carousel.js"></script>
+
 <script src="/javascripts/script.js"></script>
 
 <!--<script type="text/javascript">
