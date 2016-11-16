@@ -1,0 +1,18 @@
+<!Doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+</head>
+<body>
+<div class="container jumbotron">
+    <form action="new" method="post" class="form-group form-group-sm">
+        <input type="text" name="name" required placeholder="username" value="<%= name %>">
+        <input type="password" name="password" required placeholder="password" value="<%= password %>">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
