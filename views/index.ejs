@@ -41,14 +41,40 @@
     <script type="text/javascript" src="/javascripts/app/angular.min.js"></script>
     <script type="text/javascript" src="/javascripts/app/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>-->
 
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
 
 
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAcGswouw31exQZTYctKN1vZ3LK9ijl_Zc",
+            authDomain: "oususvchi-1475459557849.firebaseapp.com",
+            databaseURL: "https://oususvchi-1475459557849.firebaseio.com",
+            storageBucket: "oususvchi-1475459557849.appspot.com",
+            messagingSenderId: "778437368703"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <!--<script>
 
         //configuring
+
+         var config = {
+         apiKey: "AIzaSyAcGswouw31exQZTYctKN1vZ3LK9ijl_Zc",
+         authDomain: "oususvchi-1475459557849.firebaseapp.com",
+         databaseURL: "https://oususvchi-1475459557849.firebaseio.com/",
+         storageBucket: "gs://oususvchi-1475459557849.appspot.com"
+         //messagingSenderId: "297106554955"
+
+         };
+
+        /*
         var config = {
             apiKey: "AIzaSyDteNE0JKZ0ei8YckaIXHIuK-s3FpdYkvU",
             authDomain: "dc-weatherapp.firebaseapp.com",
@@ -56,17 +82,16 @@
             storageBucket: "gs://dc-weatherapp.appspot.com",
             messagingSenderId: "297106554955"
 
-        };
-
+        };*/
         var app = firebase.initializeApp(config);
 
 
-    </script>
+    </script>-->
 
     <!--<script src="App.js"></script>-->
 
     <!--Google Web Crawl-->
-    <meta name="google-site-verification" content="SYCDEJ4VKBLqPIaowu0rKkbE4EnhMRFVLyW01bLCEqU" />
+    <meta name="google-site-verification" content="SYCDEJ4VKBLqPIaowu0rKkbE4EnhMRFVLyW01bLCEqU"/>
 </head>
 
 <body id="body">
@@ -168,7 +193,6 @@
                 <p></p>
                 <div class="collapse" id="{{work.id}}">
                     <div ng-include='work.ext'></div>
-
 
 
                 </div>

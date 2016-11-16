@@ -2,11 +2,24 @@
 
 <head>
 
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAcGswouw31exQZTYctKN1vZ3LK9ijl_Zc",
+            authDomain: "oususvchi-1475459557849.firebaseapp.com",
+            databaseURL: "https://oususvchi-1475459557849.firebaseio.com",
+            storageBucket: "oususvchi-1475459557849.appspot.com",
+            messagingSenderId: "778437368703"
+        };
+        firebase.initializeApp(config);
+    </script>
 
-    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
 
     <script>
         //configuring
+        /*
         var config = {
             apiKey: "AIzaSyDteNE0JKZ0ei8YckaIXHIuK-s3FpdYkvU",
             authDomain: "dc-weatherapp.firebaseapp.com",
@@ -15,11 +28,11 @@
             messagingSenderId: "297106554955"
 
         };
-
+*/
         var app = firebase.initializeApp(config);
 
     </script>
-
+-->
     <style>
         body {
             display: flex;
@@ -43,8 +56,7 @@
     <script>
 
 
-
-        var uploadfiles = function(){
+        var uploadfiles = function () {
             var title = document.getElementById("title").value;
             var by = document.getElementById("by").value;
 
@@ -54,39 +66,37 @@
 
             var file = document.getElementById("filebtn").files[0];
 
-            var storageRef = app.storage().ref('images/'+file.name);
+            var storageRef = app.storage().ref('images/' + file.name);
 
             var task = storageRef.put(file);
 
             task.on('state_changed',
 
-                    function progress(snapshot){
-                        var perc = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
-                        uploader.value=perc;
+                    function progress(snapshot) {
+                        var perc = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                        uploader.value = perc;
                     },
 
-                    function error(err){
+                    function error(err) {
                         alert('error while uploading')
                         console.log('error while uploading' + err)
                     },
-                    function success(){
+                    function success() {
                         var title = document.getElementById("title").value;
                         var by = document.getElementById("by").value;
                         // console.log(task)
                         // console.log(by)
                         var newPostKey = app.database().ref().child('posts').push().key()
-                        app.database().ref("posts/"+newPostKey).set(
+                        app.database().ref("posts/" + newPostKey).set(
                                 {
-                                    'title':title,
-                                    'by':by,
+                                    'title': title,
+                                    'by': by,
                                     'img': task.snapshot.downloadURL,
                                     'time': Date.now()
                                 }
                         )
                     }
-
             )
-
 
 
         }
