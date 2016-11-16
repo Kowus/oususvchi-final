@@ -48,11 +48,11 @@
             var title = document.getElementById("title").value;
             var by = document.getElementById("by").value;
 
-            var uploader = document.getElementById("uploader")
-            var filebtn = document.getElementById("filebtn")
+            var uploader = document.getElementById("uploader");
+            var filebtn = document.getElementById("filebtn");
 
 
-            var file = document.getElementById("filebtn").files[0]
+            var file = document.getElementById("filebtn").files[0];
 
             var storageRef = app.storage().ref('images/'+file.name);
 
@@ -67,6 +67,7 @@
 
                     function error(err){
                         alert('error while uploading')
+                        console.log('error while uploading' + err)
                     },
                     function success(){
                         var title = document.getElementById("title").value;
@@ -78,7 +79,8 @@
                                 {
                                     'title':title,
                                     'by':by,
-                                    'img': task.snapshot.downloadURL
+                                    'img': task.snapshot.downloadURL,
+                                    'time': Date.now()
                                 }
                         )
                     }

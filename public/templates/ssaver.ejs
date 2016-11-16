@@ -1,6 +1,6 @@
 <h6 class="block_title">Screen Savers</h6>
 <div class="row port cs-style-3">
-    <div ng-repeat="pic in pics" class="col-md-4 col-sm-6 col-xs-12 item-space">
+    <div ng-repeat="pic in pics |orderBy: '-time'" class="col-md-4 col-sm-6 col-xs-12 item-space">
         <figure style="padding-top: 70px;">
             <img src="{{pic.img}}" alt="">
             <figcaption>
