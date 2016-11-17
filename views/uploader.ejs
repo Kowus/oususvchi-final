@@ -12,7 +12,7 @@
             storageBucket: "oususvchi-1475459557849.appspot.com",
             messagingSenderId: "778437368703"
         };
-        firebase.initializeApp(config);
+        var app = firebase.initializeApp(config);
     </script>
 
     <!--<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
@@ -95,6 +95,7 @@
                                     'time': Date.now()
                                 }
                         )
+                        alert("Successful!")
                     }
             )
 
