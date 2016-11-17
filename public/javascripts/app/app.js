@@ -8,7 +8,7 @@
 
         // window.location.
 
-        var ref = firebase.database().ref().child("images/");
+        var ref = firebase.database().ref().child("posts/");
         $scope.pics = $firebaseArray(ref);
 
     });
