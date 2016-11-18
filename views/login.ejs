@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <title><%= title %></title>
     <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
 </head>
+<style>
+    .jumbotron {
+        background-color: #c4e3f3;
+        align-content: center;
+    }
+</style>
 <body>
 <div class="container jumbotron">
-    <form action="new" method="post" class="form-group form-group-sm">
+    <form action="new" method="post" id="myForm" class="form-group form-group-sm">
         <input type="text" name="name" required placeholder="username" value="<%= name %>">
         <input type="password" name="password" required placeholder="password" value="<%= password %>">
         <button type="submit">Submit</button>
