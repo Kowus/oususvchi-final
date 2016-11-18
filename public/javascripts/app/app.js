@@ -3,13 +3,13 @@
     var app = angular.module('pagey', ["firebase"]);
 
 
-    app.controller('PortfolioController', function ($scope, $firebaseArray) {
+    app.controller('PortfolioController', function($scope,$firebaseArray) {
         this.works = portfolio;
 
         // window.location.
 
-        var ref = firebase.database().ref().child("posts/");
-        $scope.pics = $firebaseArray(ref);
+        var ref = firebase.database().ref().child("posts/")
+        $scope.pics = $firebaseArray(ref)
 
     });
 
@@ -49,7 +49,8 @@
                 image: '/images/ousumbre2.jpg',
                 id: 'ssaverId',
                 id2: '#ssaverId',
-                ext: '/templates/ssaver.ejs'
+                ext: '/templates/ssaver.ejs',
+                show: true
             },
             {
                 name: 'People of Ghana',
@@ -58,7 +59,8 @@
                 image: '/images/osu_castle.jpg',
                 id: 'peepoId',
                 id2: '#peepoId',
-                ext: '/templates/peepo.htm'
+                ext: 'https://spark.adobe.com/page/W6ynB/',
+                show: false
             }
         ];
 

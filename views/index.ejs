@@ -39,15 +39,14 @@
 
     <!--  angular js -->
     <script type="text/javascript" src="/javascripts/app/angular.min.js"></script>
-    <script type="text/javascript" src="/javascripts/app/app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <!--<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>-->
 
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
 
 
-
-    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>-->
     <script>
         // Initialize Firebase
         var config = {
@@ -57,39 +56,10 @@
             storageBucket: "oususvchi-1475459557849.appspot.com",
             messagingSenderId: "778437368703"
         };
-      var app = firebase.initializeApp(config);
+        var app = firebase.initializeApp(config);
     </script>
 
-
-    <!--<script>
-
-        //configuring
-
-         var config = {
-         apiKey: "AIzaSyAcGswouw31exQZTYctKN1vZ3LK9ijl_Zc",
-         authDomain: "oususvchi-1475459557849.firebaseapp.com",
-         databaseURL: "https://oususvchi-1475459557849.firebaseio.com/",
-         storageBucket: "gs://oususvchi-1475459557849.appspot.com"
-         //messagingSenderId: "297106554955"
-
-         };
-
-        /*
-        var config = {
-            apiKey: "AIzaSyDteNE0JKZ0ei8YckaIXHIuK-s3FpdYkvU",
-            authDomain: "dc-weatherapp.firebaseapp.com",
-            databaseURL: "https://dc-weatherapp.firebaseio.com",
-            storageBucket: "gs://dc-weatherapp.appspot.com",
-            messagingSenderId: "297106554955"
-
-        };*/
-        var app = firebase.initializeApp(config);
-
-
-    </script>-->
-
-    <!--<script src="App.js"></script>-->
-
+    <script type="text/javascript" src="/javascripts/app/app.js"></script>
     <!--Google Web Crawl-->
     <meta name="google-site-verification" content="SYCDEJ4VKBLqPIaowu0rKkbE4EnhMRFVLyW01bLCEqU"/>
 </head>
@@ -172,7 +142,7 @@
     <div class="container">
         <h2 class="block_title">Portfolio</h2><a name="portfolio"></a>
         <div class="row port cs-style-3">
-            <div class="col-md-5 col-sm-6 col-xs-12 item-space" ng-repeat="work in port.works">
+            <div class="col-md-5 col-sm-6 col-xs-12 item-space" ng-repeat="work in port.works" ng-show="{{work.show}}">
                 <a name="{{work.link}}"></a>
                 <figure>
                     <img ng-src="{{work.image}}" alt="{{work.name}}">
@@ -338,7 +308,7 @@
                 </p>
             </div>
             <div class="col-sm-6"><i class=""></i>
-                <p class="designed ousfooter">Designed by: <a href="http://www.kowus.xyz">Barnabas Nomo</a></p>
+                <p class="designed ousfooter">Designed by: <a href="http://www.kowus.xyz" target="_blank">Barnabas Nomo</a></p>
             </div>
         </div>
     </div>

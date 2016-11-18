@@ -15,24 +15,7 @@
         var app = firebase.initializeApp(config);
     </script>
 
-    <!--<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
 
-    <script>
-        //configuring
-        /*
-        var config = {
-            apiKey: "AIzaSyDteNE0JKZ0ei8YckaIXHIuK-s3FpdYkvU",
-            authDomain: "dc-weatherapp.firebaseapp.com",
-            databaseURL: "https://dc-weatherapp.firebaseio.com",
-            storageBucket: "dc-weatherapp.appspot.com",
-            messagingSenderId: "297106554955"
-
-        };
-*/
-        var app = firebase.initializeApp(config);
-
-    </script>
--->
     <style>
         body {
             display: flex;
@@ -56,48 +39,49 @@
     <script>
 
 
-        var uploadfiles = function () {
+
+        var uploadfiles = function(){
             var title = document.getElementById("title").value;
             var by = document.getElementById("by").value;
 
-            var uploader = document.getElementById("uploader");
-            var filebtn = document.getElementById("filebtn");
+            var uploader = document.getElementById("uploader")
+            var filebtn = document.getElementById("filebtn")
 
 
-            var file = document.getElementById("filebtn").files[0];
+            var file = document.getElementById("filebtn").files[0]
 
-            var storageRef = app.storage().ref('images/' + file.name);
+            var storageRef = app.storage().ref('images/'+file.name);
 
             var task = storageRef.put(file);
 
             task.on('state_changed',
 
-                    function progress(snapshot) {
-                        var perc = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                        uploader.value = perc;
+                    function progress(snapshot){
+                        var perc = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+                        uploader.value=perc;
                     },
 
-                    function error(err) {
-                        alert('error while uploading' + err);
-                        console.log('error while uploading' + err)
+                    function error(err){
+                        alert('error while uploading')
                     },
-                    function success() {
+                    function success(){
                         var title = document.getElementById("title").value;
                         var by = document.getElementById("by").value;
                         // console.log(task)
                         // console.log(by)
-                        var newPostKey = app.database().ref().child('posts').push().key()
-                        app.database().ref("posts/" + newPostKey).set(
+                        var newPostKey = app.database().ref().child('posts').push().key
+                        app.database().ref("posts/"+newPostKey).set(
                                 {
-                                    'title': title,
-                                    'by': by,
+                                    'title':title,
+                                    'by':by,
                                     'img': task.snapshot.downloadURL,
                                     'time': Date.now()
                                 }
                         )
-                        alert("Successful!")
                     }
+
             )
+
 
 
         }
