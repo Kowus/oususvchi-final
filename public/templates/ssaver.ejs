@@ -1,4 +1,4 @@
-<h6 class="block_title">Screen Savers</h6>
+<p class="block_title">Screen Savers</p>
 <div class="row port cs-style-3">
     <div ng-repeat="pic in pics |orderBy: '-time'" class="col-md-6 col-sm-6 col-xs-12 item-space">
         <figure style="padding-top: 70px; object-fit: cover;">
@@ -6,7 +6,7 @@
             <figcaption>
                 <h3 style="font-size: 1em; font-weight: bold;">{{pic.title}}</h3>
                 <span>{{pic.by}}</span>
-                <a ng-href="{{pic.getDownloadURL()}}" class="button" download>Download</a>
+                <a ng-href="{{pic.img}}" class="button" download>Download</a>
             </figcaption>
         </figure>
         <div class="clearfix"></div>
