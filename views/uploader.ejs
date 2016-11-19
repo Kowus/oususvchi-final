@@ -65,8 +65,10 @@
                         alert('error while uploading')
                     },
                     function success(){
+
                         var title = document.getElementById("title").value;
                         var by = document.getElementById("by").value;
+                        alert("Successful!");
                         // console.log(task)
                         // console.log(by)
                         var newPostKey = app.database().ref().child('posts').push().key
@@ -78,6 +80,7 @@
                                     'time': Date.now()
                                 }
                         )
+
                     }
 
             )
