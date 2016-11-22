@@ -1,7 +1,7 @@
 {
   "name": "ousu-svchi",
   "version": "1.0.0",
-  "description": "oususvchi's server side validation",
+  "description": "Ousu Svchi, the best photographer in Ghana has the best screeensaver collection... Check them out and download",
   "main": "index.js",
   "dependencies": {
     "express": "~4.14.0",
