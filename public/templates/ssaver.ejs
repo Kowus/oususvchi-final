@@ -1,4 +1,5 @@
 <p class="block_title">Screen Savers</p>
+<small>for optimum performance, please use google chrome</small>
 <div class="row port cs-style-3">
     <div ng-repeat="pic in pics |orderBy: '-time'" class="col-md-6 col-sm-6 col-xs-12 item-space">
         <figure style="padding-top: 70px; object-fit: cover;">
@@ -8,7 +9,7 @@
                 <span>{{pic.by}}</span>
                 <a ng-href="{{pic.img}}" class="button htem2" download="{{pic.img}}">Download</a>
             </figcaption>
-            <a ng-href="{{pic.img}}" class="button htem col-sm-3" download="{{pic.img}}">Download</a>
+            <a ng-href="{{pic.img}}" class="button htem col-sm-3" download="{{pic.img}}" style="color: steelblue; padding: 10px 8px">Download</a>
         </figure>
         <div class="clearfix"></div>
     </div>
