@@ -105,25 +105,25 @@
                 pic: '/images/testimonial2.jpg',
                 name: 'Barnabas Nomo',
                 title: 'C.E.O',
-                content: 'Careful Jacob, they\'ll think you\'re a hard worker',
+                content: 'Careful Joshua, they\'ll think you\'re a hard worker',
             },
             {
                 pic: '/images/testimonial2.jpg',
                 name: 'Barnabas Nomo',
                 title: 'C.E.O',
-                content: 'Careful Jacob, they\'ll think you\'re a hard worker',
+                content: 'Careful Joshua, they\'ll think you\'re a hard worker',
             },
             {
                 pic: '/images/testimonial2.jpg',
                 name: 'Barnabas Nomo',
                 title: 'C.E.O',
-                content: 'Careful Jacob, they\'ll think you\'re a hard worker',
+                content: 'Careful Joshua, they\'ll think you\'re a hard worker',
             },
             {
                 pic: '/images/testimonial2.jpg',
                 name: 'Barnabas Nomo',
                 title: 'C.E.O',
-                content: 'Careful Jacob, they\'ll think you\'re a hard worker',
+                content: 'Careful Joshua, they\'ll think you\'re a hard worker',
             },
         ];
 
