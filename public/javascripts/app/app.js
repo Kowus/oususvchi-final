@@ -8,22 +8,13 @@
 
         // window.location.
 
-        var ref = firebase.database().ref().child("posts/")
+        var ref = firebase.database().ref().child("posts/");
         $scope.pics = $firebaseArray(ref)
 
     });
 
-    app.controller('ServicesController', function () {
-        this.service = services;
-    });
-
-    app.controller('TestimonialController', function () {
-        this.test = testimonials;
-    });
-
-    app.controller('NavController', function () {
-        this.navs = navigationTabs;
-    });
+    
+	
 
     app.controller('ProfileController', function () {
         this.prof = profile;
@@ -37,8 +28,41 @@
         this.isSelected = function (checkTab) {
             return this.tab == checkTab;
         };
-    })
+    });
+    
+	// Contains The Navigation tabs
+    app.directive('navTabs', function () {
+	    return{
+		    restrict: 'E',
+		    templateUrl: '/templates/navs.html',
+		    controller:function () {
+			    this.navs = navigationTabs;
+		    },
+		    controllerAs: 'navctrl'
+	    };
+    });
 
+	app.directive('services', function () {
+		return{
+			restrict: 'E',
+			templateUrl: '/templates/services.html',
+			controller:function () {
+				this.service = services;
+			},
+			controllerAs: 'servi'
+		}
+	});
+	
+	app.directive('testimonials', function () {
+		return{
+			restrict: 'E',
+			templateUrl: '/templates/testimonials.html',
+			controller:function () {
+				this.test = testimonials;
+			},
+			controllerAs: 'tescon'
+		};
+	});
 
     var portfolio =
         [
@@ -102,7 +126,7 @@
     var testimonials =
         [
             {
-                pic: '/images/testimonial2.jpg',
+                pic: '/images/barnabas.jpg',
                 name: 'Barnabas Nomo',
                 title: 'C.E.O',
                 content: 'Careful Joshua, they\'ll think you\'re a hard worker',

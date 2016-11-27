@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+			<div class="col-xs-6">
+				<!--<div class="logo"><a data-scroll href="#body" class="logo-text">Ousu Svchi</a></div>-->
+				<div class="logo logo-text">Ousu Svchi</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="nav">
+					<a href="#" data-placement="bottom" title="Menu" class="menu" data-toggle="dropdown"
+					   target="_self"><i
+							class="pe-7s-menu"></i></a>
+					<div class="dropdown-menu">
+						<div class="arrow-up"></div>
+						<ul>
+							<!-- angular array for nav-->
+							<li ng-repeat="nav in navctrl.navs"><a data-scroll href="{{nav.href}}" target="_self">{{nav
+								.name}}<i
+										class="{{nav.class}}"></i></a><span class="menu-effect"></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	
+	
+	</div>
+</div>

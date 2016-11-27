@@ -1,0 +1,16 @@
+<div class="container">
+	<h2 class="block_title">Services</h2>
+	<div class="row"><a name="services"></a>
+		<div class="col-md-3 col-sm-6" ng-repeat="serv in servi.service">
+			<div class="services">
+				<div class="service-wrap">
+					<i class="{{serv.icon}}"></i>
+					<a href="{{serv.link}}" target="_self" class="ouslinks">
+						<h3>{{serv.head}}</h3>
+						<p>{{serv.content}}</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
