@@ -412,20 +412,8 @@ header{
 .item-space {
     margin-bottom: 30px;
 }
-.bankd {
-	background-image: url(../images/ousumbre1.jpg);
-	width: 100%;
-	height: 60vh;
-	background-attachment: fixed;
-	background-size: cover;
-	
-	
-}
-.bankd2 {
-	opacity: 0;
-	color: white transparent;
-	
-}
+
+
 
 
 /* ///////////////////////////////////////////////////////////////////// 
@@ -536,7 +524,9 @@ header{
 .form-group input,.form-group textarea {
     color: #FFF;
 }
-
+.btn-default{
+    background-color: rgba(0, 143, 96, 0.7);
+}
 #kowus {
 	font-size: 1.5em;
 	color: orangered;
@@ -754,6 +744,9 @@ footer {
 }
 @media all and (max-width: 380px) {
 
+    .hdn{
+        visibility: hidden;
+    }
 
 	.logo-text {
 	    font-size: 2em;
@@ -792,6 +785,9 @@ footer {
 
 @media all and (max-width: 480px) {
 
+    .hdn{
+        visibility: hidden;
+    }
 	.scrollDown {
 	    top: 70%;
 	    left: 44%;
@@ -813,5 +809,8 @@ footer {
          opacity: 1;
 
      }
+    .hdn{
+        visibility: hidden;
+    }
 
 }

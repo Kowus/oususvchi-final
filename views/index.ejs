@@ -106,7 +106,7 @@
                 <a name="{{work.link}}"></a>
                 <figure>
                     <img ng-src="{{work.image}}" alt="{{work.name}}">
-                    <figcaption>
+                    <figcaption class="hdn">
                         <h3>{{work.name}}</h3>
                         <span>{{work.description}}</span>
 
@@ -115,8 +115,8 @@
 
                     </figcaption>
 
-                    <a href="{{work.id2}}" class="button htem col-sm-3" data-toggle="collapse"
-                       style="color: steelblue; background-color: #333333; padding: 10px 8px">Take a
+                    <a href="{{work.id2}}" class="btn btn-default htem col-sm-3" data-toggle="collapse"
+                       >Take a
                         look</a>
                 </figure>
 
@@ -145,6 +145,7 @@
 
 <section id="testimonial" class="testimonial-area">
     <testimonials></testimonials>
+    <!-- TODO: Create a controller to handle the testimonials and shift from jQuery's image slides-->
 </section>
 <!-- testimonial -->
 

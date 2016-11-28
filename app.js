@@ -91,7 +91,7 @@ app.post('/myapi', function (req, res) {
         console.log(mstus);
     });
 });
-
+/*
 app.post('/new', function (req, res) {
     var dtb = date.getUTCHours() + ':' + date.getUTCMinutes() + 'UTC';
     var name = req.body.name;
@@ -111,7 +111,7 @@ app.post('/new', function (req, res) {
         });
     }
 
-})
+});*/
 
 
 // catch 404 and forward to error handler

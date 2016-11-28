@@ -59,6 +59,10 @@
 			templateUrl: '/templates/testimonials.html',
 			controller:function () {
 				this.test = testimonials;
+				this.current = 0;
+				this.setCurrent = function (newGallery) {
+					this.current = newGallery || 0;
+				};
 			},
 			controllerAs: 'tescon'
 		};
@@ -94,31 +98,32 @@
                 icon: 'pe-7s-phone pe-dj pe-va',
                 head: 'Screen Savers',
                 content: 'Give your phone\'s homescreen a cool feel! Use pictures from my weekly series as Wallpapers.',
-                link: '#ssaver',
+                link: '#ssaver'
 
 
             },
             {
                 icon: 'pe-7s-camera pe-dj pe-va',
                 head: 'Photography',
-                content: 'Observe nature\'s diverse intricacies and beauty through my lens, and of course, your screens.',
-                link: '#peepo',
+                // content: 'Observe nature\'s diverse intricacies and beauty through my lens, and of course, your screens. coming soon',
+	            content: 'Coming Soon',
+                link: '#peepo'
 
             },
             {
                 icon: 'pe-7s-note2 pe-dj pe-va',
                 head: 'Events & Coverage',
                 content: 'Be it weddings or graduations, or leisurely picnics, I\'m the go to guy, if you want to get going.',
-                link: '#contact',
+                link: '#contact'
 
             },
             {
                 icon: 'pe-7s-config pe-dj pe-va',
                 head: 'Support',
                 content: 'Are you an upcoming photographer? Do you need mentoring or tips to get started? Drop me a line!',
-                link: '#contact',
+                link: '#contact'
 
-            },
+            }
 
 
         ];
@@ -128,27 +133,29 @@
             {
                 pic: '/images/barnabas.jpg',
                 name: 'Barnabas Nomo',
+                title: 'Teen Mentor, Instructor, Freelance Developer (kowus.xyz)',
+                content: 'Joshua\'s uncanny dexterity in determining the right moment in time to snap a shot, and his love for unexpected photo opportunities is what I like most about him and the reason why he\'s got the photogenic me covered; Careful Joshua, they\'ll think you\'re a hard worker'
+            }/*,
+            {
+                pic: '/images/testimonial2.jpg',
+                name: 'Barnabas Nomo',
                 title: 'C.E.O',
-                content: 'Careful Joshua, they\'ll think you\'re a hard worker',
+                content: 'Joshua\'s uncanny dexterity in determining the right moment in time to snap a shot, and his love for' +
+                         ' unexpected photo opportunities is what I like most about him and the reason why he\'s got the' +
+                         ' photogenic me covered'
             },
             {
                 pic: '/images/testimonial2.jpg',
                 name: 'Barnabas Nomo',
                 title: 'C.E.O',
-                content: 'Careful Joshua, they\'ll think you\'re a hard worker',
+                content: 'For a few hours to come, we must cash and carry'
             },
             {
                 pic: '/images/testimonial2.jpg',
                 name: 'Barnabas Nomo',
                 title: 'C.E.O',
-                content: 'Careful Joshua, they\'ll think you\'re a hard worker',
-            },
-            {
-                pic: '/images/testimonial2.jpg',
-                name: 'Barnabas Nomo',
-                title: 'C.E.O',
-                content: 'Careful Joshua, they\'ll think you\'re a hard worker',
-            },
+                content: 'Careful Joshua, they\'ll think you\'re a hard worker'
+            }*/
         ];
 
     var navigationTabs =
